@@ -52,7 +52,7 @@
 
     <section class="coders">
         <h3>For coders</h3>
-        <p class="bigP">What you will <span>gain</span></p>
+        <p class="bigP">What you will <span class="highlighted">gain</span></p>
         <p>You are a coder who wants to level up his skills in coding  and problem solving? Here is what we provide.</p>
         
         <div class="container">
@@ -103,7 +103,7 @@
 
     <section class="managers">
         <h3>For managers</h3>
-        <p class="bigP">Access <span>high-professional</span> platform for coding challenges design</p>
+        <p class="bigP">Access <span class="highlighted">high-professional</span> platform for coding challenges design</p>
         
         <div class="container">
             <div class="card">
@@ -159,40 +159,55 @@
 
     <section class="testimonials">
         <h3 class="testimonals-headline">Testimonials</h3>
-        <div class="wrapper-testimonials">
-            <p class="stars">&#128970;&#128970;&#128970;&#128970;&#128970;</p>
-            <p class="quote">"This platform is an absolute game-changer for competitive programmers. The
-                extensive range of problems and challenges offered here truly hones your skills
-                and prepares you for any coding competition. With detailed solutions and an
-                active community, it's the perfect environment to sharpen your coding
-                prowess."
-            </p>
-            <img class="testi-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="profile-pic">
-            <h4 class="quoter-name">June Cha</h4>
-            <p class="quoter-profession">Software Engineer</p>
+
+        <div class="testimonials-container">
+            <a id="prev" onclick="minusSlides()">&#10094;</a>
+            <div class="testimonials-card-wrapper fade">
+                <p id="stars">&#128970;&#128970;&#128970;&#128970;&#128970;</p>
+                <p id="quote">"This platform is an absolute game-changer for competitive programmers. The
+                    extensive range of problems and challenges offered here truly hones your skills
+                    and prepares you for any coding competition. With detailed solutions and an
+                    active community, it's the perfect environment to sharpen your coding
+                    prowess."
+                </p>
+                <img id="testi-img" src="https://randomuser.me/api/portraits/women/44.jpg" alt="profile-pic">
+                <h4 id="quoter-name">June Cha</h4>
+                <p id="quoter-profession">Software Engineer</p>
+            </div>
+            <a id="next" onclick="plusSlides()">&#10095;</a>
         </div>
+        
              
     </section>
     
     <section class="contact">
         <div class="wrapper-contact">
             <h2>Contact us</h2>
-            <form action="...">
+            <form id="contactForm">
                 <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input id="name" type="text" name="name" placeholder="Your Name">
+                <p id="name-error" class="error-message"></p>
+
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
-                <label for="msg">Message</label>
-                <textarea itemid="msg" name="message" placeholder="Your Message"></textarea>
-                <button>Submit</button>
+                <input id="email" type="email" name="email" placeholder="Your Email">
+                <p id="email-error" class="error-message"></p>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                <p id="message-error" class="error-message"></p>
+
+                <button type="submit">Submit</button>
             </form>
         </div>
         
     </section>
 
     <footer>
-        <p>&#169 2024 Your Competetive Programmying Plattform. All rights reserved.</p>
+        <p>&#169 <span id="year">JS fills in the year</span> Your Competetive Programmying Plattform. All rights reserved.</p>
     </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>

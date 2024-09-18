@@ -210,7 +210,7 @@ color: var(--primary);
     font-weight: 700;
 }
 
-span {
+.highlighted {
     color: var(--primary);
 }
 
@@ -267,7 +267,7 @@ span {
 }
 
 .wrapper-team {
-    margin-block-end: 80px;
+    
     padding-inline: 20px;
     font-size: 12px;
     display: flex;
@@ -283,47 +283,78 @@ span {
 
 .testimonials {
     text-align: center;
+    margin-block-end: 80px;
 }
 
 .testimonals-headline{
     font-size: 30px; 
 }
 
-.wrapper-testimonials {
-    width: 280px;
-    margin: 20px auto;
-    padding: 30px;
+.testimonials-container{
+    width: 370px;
+    height: 500px;
+    margin-inline: auto;
     background-color: var(--white);
     border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonials-card-wrapper {
+    width: 300px;   
+    padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.stars {
+#prev, #next {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    font-size: 16px;
+    border: 1px solid rgba(211, 211, 211, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* I dont know why, but I couln't center the "<" and ">" 100% in the box. Even though I reset the default padding/ margin
+    to all elements at the beginning of my CSS.
+    Any ideas?*/
+  }
+
+  #prev:hover, #next:hover {
+    background-color: #817d8e;
+    text-decoration-line: none;
+}
+
+#stars {
     font-size: 22px;
 }
 
-.quote {
+#quote {
     margin-block-start: 25px;
     font-size: 14px;
     font-weight: 700;
     line-height: 130%;
 }
 
-.testi-img {
+#testi-img {
     margin-block-start: 25px;
     width: 50px;
+    height: 50px;
+    object-fit: cover;
     border-radius: 50%;
-    filter:grayscale(100%) ;
+    filter:grayscale(100%);
 }
 
-.quoter-name {
+#quoter-name {
     margin-block-start: 15px;
     font-size: 14px;
 }
 
-.quoter-profession {
+#quoter-profession {
     font-size: 12px;
     margin-block-start: 5px;
 }
@@ -379,6 +410,13 @@ footer p{
     font-size: 12px;
     text-align: center;
 }
+
+.error-message {
+    color: red;
+    padding-top: 5px;
+    font-size:10px;
+    font-weight: 100;
+  }
 
 /* =========FROM HERE ON SIGN-UP PAGE========= */
 
